@@ -1,0 +1,702 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+	<head>
+		<!-- Icono de la pesta;a de la pagina -->
+		<link rel="icon" href="images/lg.ico">
+		<!-- Titulo de la pagina -->
+		<title>Victor Fernandes</title>
+		<!-- Compatibilidad 2023 con distintos navegadores y dispositivos -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet"href="../../assets/css/stylebtnwss.css" />
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/PantLoading.css">
+		<link rel="stylesheet" href="../../assets/css/mainhome.css" />
+
+	</head>
+
+	<!-- Cuerpo de la pagina -->
+	<body oncontextmenu="return false;">
+
+		<!-- Loading al entrar a la pagina -->
+      <div class="loader-page"></div>
+
+
+      <a href="#" class="btn-wsp" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+      </a>
+	  
+					<section id="intro" >
+						<section id="sidebar" style="position: static;">
+							<div class="inner" >
+								<nav>
+									<ul>
+										<!-- Enlaces del Navdar para los distintos apartados del Portafolio -->
+										<li><a href="../../index.html">Inicio</a></li>
+										<li><a href="../../index.html#one">Conocimientos</a></li>
+										<li><a href="../../index.html#two">Experiencias</a></li>
+										<li><a href="../../index.html#three">Proyectos</a></li>
+										<li><a href="../../index.html#four">Juegos</a></li>
+										<li><a href="../../index.html#fix">Contacto</a></li>
+									</ul>
+								</nav>
+							</div>
+						</section>
+
+        
+            <style>
+              .conten{
+                  width: 100%;
+                  height: 500px;
+                  display: flex;
+                  position: relative;
+                  justify-content: center;
+                  align-content: center;
+                  margin: auto;
+                }
+
+                .containergame {
+                  height: 500px; 
+                  width: 50%;
+                  display: block;
+                  justify-content: start;
+                  align-items: start;
+                  align-content: start;
+                  left: 0;
+
+                }
+        
+                .grid {
+                  width: 400px;
+                  height: 400px;
+                  display: flex;
+                  flex-wrap: wrap;
+                  border-style: solid;
+                  background-image: url("https://as2.ftcdn.net/v2/jpg/01/01/78/03/1000_F_101780352_I3bDsI4PGZ8hSOYxnknHS1vNp5cWokfw.jpg");
+                  z-index: 97;
+                }
+        
+                .score {
+                  color: rgb(255, 255, 255);
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+        
+                .grid div {
+                  width: 20px;
+                  height: 20px;
+                }
+        
+                .snake {
+                  border: 0px solid;
+                  border-radius: 4px;
+                  background: linear-gradient(to right, rgb(66, 196, 34), rgb(46, 170, 14));
+                  z-index: 99;
+                }
+        
+                .apple {
+                  border: 0px solid;
+                  border-radius: 100%;
+                  background-color: rgb(230, 14, 14);
+                  z-index: 98;
+                }
+                .score {
+                  border: 0px solid;
+                  background-color: rgba(0, 0, 0, 0.774);
+                  height: 50px;
+                  width: 400px;
+                  align-items: center;
+                  text-align: center;
+                  justify-content: center;
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                  font-size:x-large;
+                }
+                .start {
+                  background: linear-gradient(to bottom, rgb(35, 47, 155), rgb(71, 29, 150));
+                }
+                .start:hover {
+                  background: linear-gradient(to bottom, rgb(35, 47, 155), rgb(71, 29, 150));
+                }
+            </style>
+
+            <br> 
+            
+            <div class="conten">
+              <div class="containergame">
+                <button class='start'>Start/Restart</button>
+                <div class='score'>Score:<span>0</span></div>
+        
+                <div class='grid'>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div style="background-color: rgb(110, 148, 67); border-radius: 20px; text-align: center; height: 500px; width: 500px; position:relative; display: block;">
+                <div style="margin: 22px;">
+                  <h2> La serpiente (Snake) </h2>
+                  <p>El Snake es un videojuego lanzado a mediados de la década de 1970 que ha mantenido su popularidad desde entonces, convirtiéndose en un clásico. En 1998, el Snake obtuvo una audiencia masiva tras convertirse en un juego estándar pre-grabado en los teléfonos Nokia.</p>
+                  <img src="https://static.vecteezy.com/system/resources/thumbnails/018/991/436/small/8-bit-pixel-of-snake-animal-pixel-for-game-assets-and-cross-stitch-patterns-in-illustrations-vector.jpg" style="border-radius: 100%; height: 140px; width: 140px;">
+                </div>
+              </div>
+            </div>
+
+            <br>
+        
+            <script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const squares = document.querySelectorAll('.grid div')
+                const scoreDisplay = document.querySelector('span')
+                const startBtn = document.querySelector('.start')
+                const stopBtn = document.querySelector('.stop')
+        
+                const width = 20
+                let currentIndex = 0 // Primer Div
+                let appleIndex = 0 // Primer Div
+                let currentSnake = [2,1,0] 
+                let direction = 1
+                let score = 0
+                let speed = 0.9
+                let intervalTime = 0
+                let interval = 0
+        
+        
+                // Para empezar y reiniciar el juego
+                function startGame() {
+                  currentSnake.forEach(index => squares[index].classList.remove('snake'))
+                  squares[appleIndex].classList.remove('apple')
+                  clearInterval(interval)
+                  score = 0
+                  randomApple()
+                  direction = 1
+                  scoreDisplay.innerText = score
+                  intervalTime = 800
+                  currentSnake = [2,1,0]
+                  currentIndex = 0
+                  currentSnake.forEach(index => squares[index].classList.add('snake'))
+                  interval = setInterval(moveOutcomes, intervalTime)
+                }
+        
+                function stopGame() {
+                  this.paused = !this.paused;
+                  document.getElementById('paused').innerHTML = (this.paused ? 'paused' : ' &nbsp; ');
+                }
+        
+        
+                // Sunción que se ocupa de TODOS los resultados de la serpientes
+                function moveOutcomes() {
+        
+                  // Se ocupa de si la serpiente golpea el borde y si la serpiente que se golpea a sí misma
+                  if (
+                    (currentSnake[0] + width >= (width * width) && direction === width ) || // Si la serpiente toca fondo
+                    (currentSnake[0] % width === width -1 && direction === 1) || // Si la serpiente golpea la pared derecha
+                    (currentSnake[0] % width === 0 && direction === -1) || // si la serpiente golpea la pared izquierda
+                    (currentSnake[0] - width < 0 && direction === -width) ||  // Si la serpiente llega a la cima
+                    squares[currentSnake[0] + direction].classList.contains('snake') // Si la serpiente entra en sí misma
+                  ) {
+                    return clearInterval(interval) // Esto borrará el intervalo si ocurre algo de lo anterior
+                  }
+        
+                  const tail = currentSnake.pop() // Elimina el último elemento de la matriz y lo muestra
+                  squares[tail].classList.remove('snake')  // Eliminar la clase de serpiente de la COLA
+                  currentSnake.unshift(currentSnake[0] + direction) // Da dirección a la cabeza de la matriz
+        
+                  //  Se ocupa de la serpiente que se queda con la manzana
+                  if(squares[currentSnake[0]].classList.contains('apple')) {
+                    squares[currentSnake[0]].classList.remove('apple')
+                    squares[tail].classList.add('snake')
+                    currentSnake.push(tail)
+                    randomApple()
+                    score++
+                    scoreDisplay.textContent = score
+                    clearInterval(interval)
+                    intervalTime = intervalTime * speed
+                    interval = setInterval(moveOutcomes, intervalTime)
+                  }
+                  squares[currentSnake[0]].classList.add('snake')
+                }
+        
+        
+                // Genera una nueva manzana una vez que se come la manzana
+                function randomApple() {
+                  do{
+                    appleIndex = Math.floor(Math.random() * squares.length)
+                  } while(squares[appleIndex].classList.contains('snake')) // Asegurándose de que las manzanas no aparezcan en la serpiente
+                  squares[appleIndex].classList.add('apple')
+                }
+        
+        
+                // Asignar funciones a códigos clave
+                function control(e) {
+                  squares[currentIndex].classList.remove('snake')
+        
+                  if(e.keyCode === 39) {
+                    direction = 1 // Si presionamos la flecha derecha en nuestro teclado, la serpiente irá a la derecha
+                  } else if (e.keyCode === 38) {
+                    direction = -width // Si presionamos la flecha hacia arriba, la serpiente retrocederá diez divs, pareciendo subir
+                  } else if (e.keyCode === 37) {
+                    direction = -1 // Si presionamos a la izquierda, la serpiente irá a la izquierda un div
+                  } else if (e.keyCode === 40) {
+                    direction = +width // Si presionamos hacia abajo, la cabeza de serpiente aparecerá instantáneamente en el div a diez divs de donde te encuentras ahora
+                  }
+                }
+        
+                document.addEventListener('keyup', control)
+                startBtn.addEventListener('click', startGame)
+                stopBtn.addEventListener('click', stopGame)
+              })
+        
+            </script>
+        
+
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<center><li style="color: rgba(255, 255, 255, 0.637);">&copy; Copyright 2023.</li><li style="color: rgba(255, 255, 255, 0.63);">Victor Fernandes</li>
+						<li style="color: rgba(255, 255, 255, 0.61);">Todos los derechos reservados.</li></center>
+					</ul>
+				</div>
+			</footer>
+
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script src="../../assets/js/PantLoading.js"></script>
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<script>
+			AOS.init();
+
+				// You can also pass an optional settings object
+				// below listed default settings
+				AOS.init({
+				// Global settings:
+				disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+				startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+				initClassName: 'aos-init', // class applied after initialization
+				animatedClassName: 'aos-animate', // class applied on animation
+				useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+				disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+				debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+				throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+				
+
+				// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+				offset: 120, // offset (in px) from the original trigger point
+				delay: 0, // values from 0 to 3000, with step 50ms
+				duration: 1500, // values from 0 to 3000, with step 50ms
+				easing: 'ease', // default easing for AOS animations
+				once: false, // whether animation should happen only once - while scrolling down
+				mirror: false, // whether elements should animate out while scrolling past them
+				anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+			});
+			</script>
+
+
+  </body>
+</html>
